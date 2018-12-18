@@ -1,0 +1,187 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    margin: 0px;
+    height: 190px;
+    width: 180px;
+    word-wrap: break-word;
+    /*word-break: break-all;*/
+}
+
+.big {
+    width: 360px;
+}
+
+svg {
+    margin: 5px 0px 0px 5px;
+}
+
+
+/* HTML elements */
+
+body {
+    font-family: Quicksand, sans-serif;
+    color: #fbfffcbb;
+    overflow-y: scroll;
+    background: #050117;
+    padding: 30px 30px 30px 30px;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    body {
+        padding: 5px 5px 5px 5px;
+        width: 380px
+    }
+}
+
+#social {
+    font-size: 85%;
+}
+
+h1 {
+    color: #FBFFFC;
+    margin: 0px 0px 20px 0px;
+    font-size: 42px;
+}
+
+h2 {
+    color: #FBFFFC;
+    margin: 0px 0px 0px 0px;
+    padding: 5px 0px 5px 10px;
+    font-size: x-large;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+p {
+    margin: 10px 10px 10px 10px;
+}
+
+li {
+    /* Required to align lists */
+    margin: 0px 0px 10px -30px;
+}
+
+a:link {
+    color: #fbfffc;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #FBFFFC;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #050117;
+}
+
+a:active {
+    color: #050117;
+    text-decoration: none;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.logolink {
+    text-decoration: none;
+    color: inherit;
+}
+
+.socialIconAwesome {
+    margin: 5px 5px 5px 5px;
+}
+
+#ben {
+    background-image: url('images/portrait_ben.jpg');
+}
+
+#roslin {
+    background-image: url('images/portrait_roslin.jpg');
+}
+
+#lorna {
+    background-image: url('images/portrait_lorna.jpg');
+}
+
+.big {
+    background-color: rgb(224, 95, 9);
+}
+
+#flickr,
+#pinterest,
+#twitter {
+    /* Make the image fill-up the box */
+    background-size: cover;
+}
+
+#other {
+    background-color: rgb(26, 99, 32);
+}
+
+#social {
+    background-color: rgb(84, 130, 255);
+}
+
+#twitter,
+#twitter a:link,
+#twitter a:visited {
+    color: #ffffff;
+    background-color: #55ACEE;
+}
+
+#wordpress,
+#wordpress a:link,
+#wordpress a:visited {
+    color: white;
+    background-color: #555555;
+}
+
+#flickr {
+    background-color: #0063DB;
+}
+
+#pinterest {
+    background-color: #6D6D6D;
+}
+
+#youtube {
+    color: #FFFFFF;
+    background-color: #F40000;
+    background: center;
+}
+
+#tumblr {
+    color: #FFFFFF;
+    background-color: #36465D;
+}
+
+#pocket {
+    color: #F5F5F5;
+    background-color: #ED4055;
+}
+
+#sonarr {
+    background-image: url('images/tiles/sonarr.png');
+    background-color: #55C7F6;
+    background-size: cover;
+}
+
+#pihole {
+    background-image: url('images/tiles/pihole.png');
+    background-color: #910000;
+    background-size: cover;
+}
+
+#datadog {
+    background-image: url('images/tiles/datadog.png');
+    background-color: #7449A5;
+    background-size: cover;
+}

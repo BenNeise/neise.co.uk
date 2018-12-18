@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Ben Neise" />
+    <meta name="description" content="The family homepage of Ben, Lorna &amp; Roslin Neise" />
+    <meta name="keywords" content="neise, ben, lorna, roslin, family, scotland, falkirk" />
+    <meta name="rating" content="general" />
+    <meta name="robots" content="index,follow" />
+
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand" type="text/css" />
+    <link rel="stylesheet" href="screen.css" type="text/css" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="charset" content="iso-8859-1" />
+    <meta http-equiv="content-language" content="english" />
+    <meta http-equiv="vw96.object type" content="document" />
+
+    <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@2.2.0/dist/tippy.all.min.js"></script>
+    <script src="js/common.js"></script>
+
+    <title>neise.co.uk</title>
+
+</head>
+
+<body>
+    <div class="logolink">
+        <a href="index.html">
+            <h1>
+                Neise.co.uk
+            </h1>
+        </a>
+    </div>
+    <script>
+        // https://getpocket.com/users/guruant/feed/read
+        pocket("https://query.yahooapis.com/v1/public/yql?q=select%20title%2Clink%20from%20rss%20where%20url%3D%22https%3A%2F%2Fgetpocket.com%2Fusers%2Fguruant%2Ffeed%2Fread%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys")
+
+        // http://twitrss.me/twitter_user_to_rss/?user=guruant
+        twitter("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%20%3D%20%22http%3A%2F%2Ftwitrss.me%2Ftwitter_user_to_rss%2F%3Fuser%3Dguruant%22&format=json&diagnostics=true&callback=")
+
+        // http://api.flickr.com/services/feeds/photos_public.gne?id=42307383@N00&lang=en-us&format=rss_200
+        flickr("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%3D%22http%3A%2F%2Fapi.flickr.com%2Fservices%2Ffeeds%2Fphotos_public.gne%3Fid%3D42307383%40N00%26lang%3Den-us%26format%3Drss_200%22&format=json&diagnostics=true&callback=")
+
+        // http://pinterest.com/guruant/feed.rss
+        pintrest("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%3D%22http%3A%2F%2Fpinterest.com%2Fguruant%2Ffeed.rss%22&format=json&diagnostics=true&callback=")
+
+        // http://ben.neise.co.uk/rss
+        blog("https://query.yahooapis.com/v1/public/yql?q=select%20title%2Clink%20from%20rss%20where%20url%3D'http%3A%2F%2Fben.neise.co.uk%2Frss'&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys")
+
+        // http://guruant.tumblr.com/rss
+        tumblr("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%3D%22http%3A%2F%2Fguruant.tumblr.com%2Frss%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys")
+    </script>
+
+    <div class="flex-container">
+        <div class="big box">
+            <h2>
+                Ben
+            </h2>
+            <p>
+                I'm Ben and I'm a cloud automation specialist helping deliver a <a href="https://en.wikipedia.org/wiki/Software-defined_data_center">SDDC</a> for <a href="http://www.sky.com/">Sky</a>.
+            </p>
+            <p>
+                In my spare time I enjoy <a href="https://500px.com/GuruAnt">taking pictures</a>, <a href="http://ben.neise.co.uk">playing around with computers</a>, and video games.
+            </p>
+        </div>
+
+        <!-- Pocket -->
+        <div class="box" id="pocket" title="See what Ben's been saving to Pocket">
+            <a href="http://getpocket.com/users/guruant/feed/read">
+                <i class="fab fa-get-pocket fa-3x"></i>
+            </a>
+            <div id="contentPocket"></div>
+        </div>
+
+
+        <!-- Flickr -->
+        <div class="box clickable" id="flickr" title="Ben's photos on Flickr">
+            <a href="http://www.flickr.com/photos/guruant/">
+                <i class="fab fa-flickr fa-3x"></i>
+            </a>
+            <div id="contentFlickr"></div>
+        </div>
+
+
+        <!-- Pinterest -->
+        <div class="box clickable" id="pinterest" title="Things Ben's been looking at on Pintrest">
+            <a href="http://pinterest.com/guruant/">
+                <i class="fab fa-pinterest fa-3x"></i>
+            </a>
+        </div>
+
+
+        <!-- Blog -->
+        <div class="box" id="wordpress" title="Ben's blog">
+            <a href="http://ben.neise.co.uk">
+                <i class="fas fa-cloud fa-3x"></i>
+            </a>
+            <div id="contentBlog"></div>
+        </div>
+
+
+        <!-- Twitter -->
+        <div class="box" id="twitter" title="Ben on Twitter">
+            <a href="https://twitter.com/GuruAnt">
+                <i class="fab fa-twitter fa-3x"></i>
+            </a>
+            <div id="contentTwitter"></div>
+        </div>
+
+        <!-- Tumblr -->
+        <div class="box" id="tumblr" title="Ben on Tumblr">
+            <a href="http://guruant.tumblr.com">
+                <i class="fab fa-tumblr fa-3x"></i>
+            </a>
+            <div id="contentTumblr"></div>
+        </div>
+
+        <div class="box" id="other">
+            <h2>
+                Other
+            </h2>
+            <ul class="fa-ul">
+                <li>
+                    <a href="http://www.amazon.co.uk/registry/wishlist/2OYG4BMZB1T5R">
+                        <i class="fab fa-amazon fa-fw">&nbsp;</i>My Amazon wish list
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=5CB4WLKQLKRE8&lc=GB&currency_code=GBP&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted">
+                        <i class="fab fa-paypal fa-fw"> </i> Send money via PayPal
+                    </a>
+                </li>
+                <li>
+                    <a href="https://bitpay.com/621794/donate">
+                        <i class="fab fa-btc fa-fw"> </i> Send Bitcoins
+                    </a>
+                </li>
+            </ul>
+            <p>&nbsp;</p>
+        </div>
+
+        <!-- Social -->
+        <div class="box" id="social" title="Other social networks">
+            <h2>Social</h2>
+
+            <!-- Google Plus -->
+            <a href="https://plus.google.com/+BenNeise" title="Google Plus">
+                <i class="fab fa-google-plus-square fa-3x fa-fw socialIconAwesome"></i>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/benneise" title="Facebook">
+                <i class="fab fa-facebook-square fa-3x fa-fw socialIconAwesome"></i>
+            </a>
+
+            <!-- XBox Live -->
+            <a href="https://live.xbox.com/en-US/Profile?pp=0&GamerTag=GuruAnt" title="XBox Live">
+                <i class="fab fa-xbox fa-3x fa-fw socialIconAwesome"></i>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="http://www.linkedin.com/in/benneise" title="LinkedIn">
+                <i class="fab fa-linkedin fa-3x fa-fw socialIconAwesome"></i>
+            </a>
+
+            <!-- PlayStation Network -->
+            <a href="http://eu.playstation.com/psn/profile/GuruAnt/" title="Playstation Network">
+                <i class="fab fa-playstation fa-3x fa-fw socialIconAwesome"></i>
+            </a>
+
+            <!-- Steam Profile -->
+            <a href="http://steamcommunity.com/id/guruant" title="Steam">
+                <i class="fab fa-steam-square fa-3x fa-fw socialIconAwesome"></i>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/GuruAnt" title="GitHub">
+                <i class="fab fa-github fa-3x fa-fw socialIconAwesome"></i>
+            </a>
+
+            <!-- 500px -->
+            <a href="https://500px.com/GuruAnt" title="500px">
+                <i class="fab fa-500px fa-3x fa-fw socialIconAwesome"></i>
+            </a>
+
+            <!-- Dropbox Referral -->
+            <a href="https://db.tt/4VXUFRZ" title="Dropbox">
+                <i class="fab fa-dropbox fa-3x fa-fw socialIconAwesome"></i>
+            </a>
+
+            <p>&nbsp;</p>
+
+        </div>
+    </div>
+</body>
+
+</html>
