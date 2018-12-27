@@ -1,6 +1,6 @@
 # README
 
-Source for the family website. Published automatically via Jenkins.
+Source for the family website.
 
 ## What is this repository for?
 
