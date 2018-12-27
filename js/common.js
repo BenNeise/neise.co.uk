@@ -91,8 +91,8 @@ function blog(uri) {
         if (this.readyState == 4 && this.status == 200) {
             var myObj = JSON.parse(this.responseText);
             if (myObj.query.results !== null) {
-                latestPost = myObj.query.results.item[0].title
-                blogLink = myObj.query.results.item[0].link
+                latestPost = myObj.query.results.feed[0].entry.title
+                blogLink = myObj.query.results.item[0].entry.link
                 blogContent = '<p><a href="' + blogLink + '">' + latestPost + '</a></p>'
             } else {
                 blogContent = '<p>My blog</p>'
