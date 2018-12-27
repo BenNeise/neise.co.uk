@@ -152,7 +152,7 @@ function twitter(uri) {
             myObj = JSON.parse(this.responseText);
             if (myObj.query.results !== null) {
                 // if it contains an image
-                console.log(myObj.query.results.item[0].description)
+                //console.log(myObj.query.results.item[0].description)
                 if (!!$('<div />').html(myObj.query.results.item[0].description).find('img').length) {
                     latestTweet = null
                     $('#twitter').css('background-image', 'url(' + $('<div />').html(myObj.query.results.item[0].description).find('img')[0].src + ')');
